@@ -8,8 +8,8 @@ public class Problem5_16 {
 		int mainNumber = input.nextInt();
 		
 		
-		for(int n = 2; n < mainNumber; ){
-			
+		for(int n = 2; n < mainNumber; ){ // JA: This is better done with a while loop
+			// JA: The last factor is missed, because at the end n is equal to mainNumber but the for loop exists
 			if (mainNumber % n == 0){
 				System.out.println(n + " ");
 				mainNumber /= n;
