@@ -1,11 +1,11 @@
 package Lab7;
 import java.util.ArrayList;
 public class Problem10_23 {
-	public static class MyString {
+	public static class MyString2 {
 
 	    char[] chars;
 
-	    public MyString(char[] chars) {
+	    public MyString2(char[] chars) {
 
 	        this.chars = new char[chars.length];
 
@@ -15,7 +15,7 @@ public class Problem10_23 {
 
 	    }
 
-	    public MyString(String string) {
+	    public MyString2(String string) {
 	        this(string.toCharArray());
 	    }
 
@@ -30,15 +30,15 @@ public class Problem10_23 {
 	        return chars.length;
 	    }
 
-	    public MyString substring(int begin, int end) {
+	    public MyString2 substring(int begin, int end) {
 	        char[] s = new char[end - begin];
 	        for (int i = begin; i < end; i++) {
 	            s[i - begin ] = chars[i];
 	        }
-	        return new MyString(s);
+	        return new MyString2(s);
 	    }
 
-	    public MyString toLowerCase() {
+	    public MyString2 toLowerCase() {
 	        // A = 65
 	        // a = 97
 	        char[] lowerCase = new char[chars.length];
@@ -51,11 +51,11 @@ public class Problem10_23 {
 	            }
 	        }
 
-	        return new MyString(lowerCase);
+	        return new MyString2(lowerCase);
 
 	    }
 
-	    public boolean equals(MyString s) {
+	    public boolean equals(MyString2 s) {
 
 	        for (int i = 0; i < s.length(); i++) {
 	            if (s.charAt(i) != chars[i]) return false;
@@ -64,7 +64,7 @@ public class Problem10_23 {
 	        return true;
 	    }
 
-	    public static MyString valueOf(int i) {
+	    public static MyString2 valueOf(int i) {
 
 	        int length = getCount(i);
 	        char[] number = new char[length];
@@ -72,10 +72,10 @@ public class Problem10_23 {
 	            number[j] = (char)('0' + (i % 10));
 	            i /= 10;
 	        }
-	        return new MyString(number);
+	        return new MyString2(number);
 	    }
 
-	    public static MyString valueOf(long i) {
+	    public static MyString2 valueOf(long i) {
 
 	        int length = getCount(i);
 	        char[] number = new char[length];
@@ -83,7 +83,7 @@ public class Problem10_23 {
 	            number[j] = (char)('0' + (i % 10));
 	            i /= 10;
 	        }
-	        return new MyString(number);
+	        return new MyString2(number);
 	    }
 
 	    private static int getCount(long i) {
@@ -114,15 +114,15 @@ public class Problem10_23 {
 
 	    }
 
-	    public int compare(MyString s) {
+	    public int compare(MyString2 s) {
 
 	        return compare(new String(s.toChars()));
 
 	    }
-	    public MyString substring(int begin) {
+	    public MyString2 substring(int begin) {
 	        return substring(begin, chars.length);
 	    }
-	    public MyString toUpperCase() {
+	    public MyString2 toUpperCase() {
 
 	        char[] temp = new char[chars.length];
 	        for (int i = 0; i < chars.length; i++) {
@@ -133,7 +133,7 @@ public class Problem10_23 {
 	            }
 	        }
 
-	        return new MyString(temp);
+	        return new MyString2(temp);
 	    }
 	    public char[] toChars() {
 	        return chars;
@@ -143,8 +143,8 @@ public class Problem10_23 {
 	        return new String(chars);
 	    }
 
-	    public static MyString valueOf(boolean b) {
-	        return new MyString((b) ? "true" : "false");
+	    public static MyString2 valueOf(boolean b) {
+	        return new MyString2((b) ? "true" : "false");
 	    }
 
 	    //  split("ab#12#453", "#") returns ab, #, 12, #, 453
