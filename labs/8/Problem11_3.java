@@ -2,6 +2,7 @@ package Lab8;
 
 import java.util.Date;
 
+// JA: You should have created a toString in the Account class
 public class Problem11_3 {
 	// Copy the code from Lab6 problem 9.7 So we have the account class to work with
 	public static class Account{
