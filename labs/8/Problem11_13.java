@@ -29,6 +29,9 @@ public class Problem11_13 {
 	}
 
 	/** Removes the duplicate elements from an array list of integers */
+	// JA: It is easier to replicate the array without the duplicates
+	// JA: The logic below fails to remove duplicates when there are
+	// JA: more than two in sequence
 	public static void removeDuplicate(ArrayList<Integer> list) {
 		for (int i = 0; i < list.size() - 1; i++) {
 			for (int j = i + 1; j < list.size(); j++) {
