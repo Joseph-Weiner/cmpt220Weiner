@@ -1,5 +1,5 @@
 package Lab9;
-
+// JA: This class nneds to throw an exception from the constructor
 public class Triangle extends GeometricObject {
 	/** I'm taking this from Lab8 because Lab9 asks for the same exact class with a new variation **/
 	
